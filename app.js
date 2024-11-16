@@ -51,6 +51,7 @@ function createTodoItem(todo, todoIndex) {
   deleteButton.addEventListener("click", () => {
     deleteTodoItem(todoIndex);
   });
+  // Here, the todo be shown as completed even after the page reload. It store the state true or false in the local storage and then shows it when the page is reloaded.
   const checkbox = todoLI.querySelector("input");
   checkbox.addEventListener("change", () => {
     allTodos[todoIndex].completed = checkbox.checked;
